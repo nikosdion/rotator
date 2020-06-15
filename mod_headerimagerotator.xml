@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/module-install.dtd">
+<install version="1.5" type="module" method="upgrade" client="site">
+	<name>Header Image Rotator</name>
+	<author>Nicholas K. Dionysopoulos</author>
+	<authorEmail>nikosdion@gmail.com</authorEmail>
+	<authorUrl>http://www.akeebabackup.com</authorUrl>
+	<creationDate>2010/11/05</creationDate>
+	<copyright>Copyright (c)2008-2010 Nicholas K. Dionysopoulos</copyright>	
+	<license>GNU/GPL v3 or later</license>
+	<version>1.2</version>
+	<description>
+		Header Image Rotator will scan a preset subdirectory of images/stories for picture
+		files (.jpg, .bmp, .gif) and display them one-by-one in a cross fading mooTools-powered
+		slideshow. The features are deliberately left minimal.
+	</description>
+	<files>
+		<filename module="mod_headerimagerotator">mod_headerimagerotator.php</filename>
+	</files>
+	<params>
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable). This allows individual module styling." />
+		<param name="@spacer" type="spacer" default="" label="" description="" />	
+		<param name="uniqueid" type="text" default="rotator" label="Unique ID for this AJAX Header Rotator" description="This ID is used by the module's CSS -as an #ID- and javascript code, so keep it unique and simple, like 'rotator', using only latin characters, without any spaces or numbers!" />
+		<param name="imagefolder" type="folderlist" directory="images/stories" hide_default="1" hide_none="1" default="" label="Image Folder path" description="Set here the path to the folder containing the images to be displayed. The module will scan this folder and display images automatically!" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="speed" type="text" default="2" label="Rotation speed" description="Set here the rotation speed (in seconds) between images." />
+		<param name="timeout" type="text" default="3" label="Rotation timeout" description="Set here the rotation timeout (in seconds) for every image." />
+		<param name="width" type="text" default="140" label="Image (header) width" description="Set here the target width of all images in pixels." />
+		<param name="height" type="text" default="105" label="Image (header) height" description="Set here the target width of all images in pixels." />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="opacity" type="text" default="100" label="Image opacity (0-100)" description="Set here the target opacity of all images." />
+		<param name="display" type="list" default="0" label="Display mode" description="How the DIV is going to be displayed">
+			<option value="0">Float Right</option>
+			<option value="1">Float Left</option>
+			<option value="2">Block</option>
+		</param>
+	</params>
+</install>
